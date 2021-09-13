@@ -1,0 +1,153 @@
+:root {
+    --primaryColor:#c59d5f; 
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.7rem;
+    color:#102a42;
+    font-size: 0.8rem;
+    line-height:1.5
+}
+
+
+main{
+    padding:20px 0;
+    background-color:#f1f5f8;
+}
+
+header{
+    margin: 50px 0;
+}
+
+
+header h1{
+    text-align: center;
+    padding:10px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+header h1::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height:3px;
+    background-color:var(--primaryColor);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+header nav ul{
+    list-style:none;
+    display: flex;
+    justify-content: center;
+    padding:10px;
+}
+
+header nav ul li{
+    margin: 0 5px;
+}
+
+
+
+header nav ul li a{
+    text-decoration: none;
+    color:var(--primaryColor);
+    background-color: #fff;
+    padding:10px 22px;
+    border:1px solid var(--primaryColor);
+    border-radius:5px;
+    cursor:pointer;
+    transition: all .3s linear
+    
+}
+
+header nav ul li a:hover{
+    background-color:var(--primaryColor);
+    color:white
+}
+
+.menu{
+    width:60%;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    justify-content:center
+}
+
+.menu .menu-item{
+    display:grid;
+    margin-bottom: 30px;
+}
+
+.menu .menu-item .foto{
+    height:200px;
+    width:100%;
+    margin-bottom:20px;
+    border: 5px solid var(--primaryColor);
+    border-radius:5px;
+}
+
+.menu .menu-item img{
+    width: 100%;
+    height:100%;
+    display:block;
+    object-fit: cover;
+}
+
+.menu .menu-item .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:3px solid black;
+    text-transform: capitalize;
+    padding-bottom:20px;
+}
+
+.menu .menu-item .header h4{
+    font-size: 0.8rem
+}
+
+.menu .menu-item .header .price{
+    color:var(--primaryColor);
+    font-size: 0.8rem
+}
+
+.menu .menu-item p{
+    margin-top: 10px;
+    color:rgb(51, 36, 36);
+    line-height: 1.5;
+}
+
+@media(min-width: 700px) {
+    header nav ul li{
+        margin: 0 20px;
+}
+
+    header nav ul li a{
+        padding:12px 30px;
+    }
+    .menu{
+        width: 80%;
+        gap: 0 50px;
+    }
+    .menu .menu-item{
+        display:grid;
+        gap:0 10px;
+        grid-template-columns: repeat(2,1fr);
+        align-items:start;
+    }
+    .menu .menu-item .foto{
+        margin-bottom:0;
+    }
+}  
